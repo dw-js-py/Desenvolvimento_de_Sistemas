@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprovado</title>
+</head>
+<body>
+
+    <script>
+
+        // 1. Entrada
+
+        let nome = prompt("Nome do aluno:");
+        let nota = Number(prompt("Qual foi a nota? (0 a 10)"));
+
+        // 2. Processamento ← escreva aqui
+
+        let situacao;
+
+        if (nota >= 7){
+            situacao = "aprovado";
+        }else if (nota >= 5){
+            situacao = "recuperação"
+        }else{
+            situacao = "reprovado"
+        }
+
+        // 3. Saída ← use alert() para mostrar o resultado
+
+        alert("O aluno " + nome + " está " + situacao + ".");
+
+
+    </script>
+    
+</body>
+</html>

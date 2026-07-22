@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto</title>
+</head>
+<body>
+
+    <script>
+
+        // 1. Entrada
+
+        let valor = Number(prompt("Digite o valor da compra (R$):"));
+
+        // 2. Processamento ← escreva aqui
+        // Calcule o precoFinal e guarde o percentual de desconto
+
+        let desconto;
+
+        if (valor > 100) {
+            desconto = 10;
+        } else {
+            desconto = 5;
+        }
+
+        let precoFinal = valor - (valor * desconto / 100);
+
+        // 3. Saída ← use \n para pular linha dentro do alert()
+        // Mostre: valor original, desconto e valor final
+
+        alert("Valor original: R$ " + valor.toFixed(2) + 
+              "\nDesconto: " + desconto + "%" + 
+              "\nValor final: R$ " + precoFinal.toFixed(2));
+
+    </script>
+    
+</body>
+</html>

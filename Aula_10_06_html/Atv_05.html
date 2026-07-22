@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // Jogada do computador (mude para testar!)
+
+        let computador = "tesoura";
+
+        // 1. Entrada
+
+        let jogador = prompt("Digite sua jogada:\npedra, papel ou tesoura");
+        jogador = jogador.toLowerCase(); // deixa tudo minúsculo
+
+        // 2. Processamento ← escreva aqui
+        // Verifique: jogada inválida, empate, vitórias e derrota
+        // Dica: use && para combinar condições
+        // Exemplo: jogador === "pedra" && computador === "tesoura"
+
+        let resultado;
+
+        if(
+            jogador !== "pedra" && jogador !== "papel" && jogador !== "tesoura"
+        ) {
+            resultado = "Jogada inválida!";
+        }
+        else if(jogador === computador) {
+            resultado = "Empate!";
+        }
+        else if(
+            (jogador === "pedra" && computador === "tesoura") ||
+            (jogador === "papel" && computador === "pedra") ||
+            (jogador === "tesoura" && computador === "papel")
+        ) {
+            resultado = "Você venceu!";
+        }
+        else {
+            resultado = "Você perdeu!";
+        }
+
+        // 3. Saída
+        // Mostre a jogada do computador e o resultado
+
+        alert("Computador jogou: " + computador + 
+              "\n" + resultado);
+
+    </script>
+    
+</body>
+</html>
